@@ -1,0 +1,134 @@
+header
+{
+	height: 75px;
+	justify-content: space-around;
+}
+
+#logo
+{
+	width: 169.5px;
+	height: 37px;
+	margin-left: 20px;
+}
+
+header nav
+{
+	margin-right: 0;
+}
+
+header .active
+{
+	padding-top: 23px;
+}
+header a
+{
+	padding-top: 23px;
+}
+
+/*SLIDER*/
+
+#slider
+{
+	padding-top: 75px;
+}
+
+#slider:before
+{
+	font-size: 13px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 5px;
+}
+
+#slider:after
+{
+	font-size: 13px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 5px;
+	padding-left: 10px;
+}
+
+#texte-slider
+{
+	top: 3%;
+	left: 8%;
+}
+
+h1
+{
+	font-size: 20px;
+	margin-bottom: 0px;
+}
+
+h1 + p
+{
+	font-family: "robotoregular";
+	font-size: 15px;
+	padding-top: 15px;
+}
+
+#bouton_plus_infos
+{
+	width: 100px;
+	padding: 10px 5px;
+	font-size: 15px;
+	box-shadow: 1px 4px 0px #308BAB;
+}
+
+
+/*TITRES DES PARTIES */
+
+h2
+{
+	font-size: 30px;
+}
+
+h2:after
+{
+	font-size: 15px;
+	top: 40px;
+}
+
+.titres-parties p
+{
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+.titres-parties i
+{
+	color: #308BAB;
+	text-align: center;
+	font-size: 15px;
+	border: 1px solid white;
+	border-radius: 50%;	
+}
+
+.trait-point
+{
+	position: absolute;
+	width: 150px;
+	top: 108px;
+	left: calc(50% - 75px);
+}
+
+/*SERVICES */
+
+
+.corps-services
+{
+	flex-direction: column;
+	height: 100%;
+	padding-top: 0px;
+}
+
+.liste-services
+{
+	width: 75%;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 125px;
+	margin-top: 0;
+}

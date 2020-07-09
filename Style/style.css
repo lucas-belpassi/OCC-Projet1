@@ -1,0 +1,797 @@
+
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('Font/Roboto-Regular-webfont.eot');
+    src: url('Font/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Font/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('Font/Roboto-Regular-webfont.woff') format('woff'),
+         url('Font/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('Font/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('Font/Roboto-Bold-webfont.eot');
+    src: url('Font/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Font/Roboto-Bold-webfont.woff2') format('woff2'),
+         url('Font/Roboto-Bold-webfont.woff') format('woff'),
+         url('Font/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('Font/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoblack';
+    src: url('Font/Roboto-Black-webfont.eot');
+    src: url('Font/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Font/Roboto-Black-webfont.woff2') format('woff2'),
+         url('Font/Roboto-Black-webfont.woff') format('woff'),
+         url('Font/Roboto-Black-webfont.ttf') format('truetype'),
+         url('Font/Roboto-Black-webfont.svg#robotoblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ERIC MEYER */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body
+{
+	width: 100%;
+	font-family: 'robotoregular'
+}
+
+#bloc-page 
+{
+	width: 100%;
+}
+
+
+
+
+/* PARTIE EN TETE MENU */
+
+header
+{
+	font-family: 'robotobold';
+	width: 100%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	position: fixed;
+	background-color: white;
+	top: 0;
+	z-index: 100000;
+}
+ 
+#logo-rogne
+{
+	display: none;
+}
+
+/* Menu */
+header ul
+{
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+/* Cases menu */
+header li
+{
+	text-decoration: none;
+	padding: 0 10px;
+	list-style: none;
+}
+
+/* Contenu case active */
+header .active
+{
+	color: black;
+	padding: 0 17px;
+	border-top: 4px solid #5cadd3;
+	padding-top: 35px;
+	opacity: 1;
+}
+
+/* Contenus des cases (non actives) */
+header a
+{
+	text-decoration: none;
+	color: black;
+	padding-top: 35px;
+	padding: 35px 17px 0px 17px;
+	opacity: 0.50;
+
+}
+
+/* Contenu des cases au survol */
+header a:hover
+{
+	border-top: 4px solid #5cadd3;
+	opacity: 1;
+}
+
+
+/* SLIDER */
+
+
+#slider
+{
+	position: relative;
+	width: 100%;
+	padding-top: 100px;
+	overflow: hidden;
+}
+
+/* Flèche de gauche */
+#slider:before
+{
+	content: "\f053" ;
+	font-family: Fontawesome;
+	font-size: 15px;
+	color: white;
+	position: absolute;
+	top: calc(50% + 18.8px);
+	left: -5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 15px;
+	padding-left: 10px;
+	border: 1px solid black;
+	border-radius: 0px 50px 50px 0px;
+	background-color: black;
+	opacity: 0.6
+}
+
+/* Flèche de droite */
+#slider:after
+{
+	content: "\f054" ;
+	font-family: Fontawesome;
+	font-size: 15px;
+	color: white;
+	position: absolute;
+	top: calc(50% + 18.8px);
+	right: -5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 10px;
+	padding-left: 15px;
+	border: 1px solid black;
+	border-radius: 50px 0px 0px 50px;
+	background-color: black;
+	opacity: 0.6
+}
+
+
+#texte-slider
+{
+	font-family: "robotobold";
+	position: absolute;
+	top: 3%;
+	left: 12%;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+}
+
+h1
+{
+	font-family: "robotoblack";
+	font-size: 40px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+h1 span
+{
+	color: #5cadd3;
+
+}
+
+#bouton_plus_infos
+{
+	width: 100px;
+	padding: 15px 15px;
+	text-align: center;
+	background-color: #5cadd3;
+	font-size: 19px;
+	border-radius: 3px;
+	box-shadow: 1px 6px 0px #308BAB;
+	margin-top: 25px;
+}
+
+.ligne-progression
+{
+	position: relative;
+	bottom: 0px;
+}
+
+.fond-ligne-progression
+{
+	position: absolute;
+	width: 100%;
+	height: 6px;
+	bottom: 2px;
+	background-color: black;
+	opacity: 0.2;
+}
+
+.progression
+{
+	position: absolute;
+	width: 10%;
+	height: 6px;
+	bottom: 2px;
+	background-color: #5cadd3;
+}
+
+
+/* Titres des parties Services et Projets */
+
+.titres-parties
+{
+	text-align: center;
+	width: 100%;
+	position: relative;
+}
+
+h2
+{
+	font-family: "robotoblack";
+	font-size: 40px;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+.titres-parties i
+{
+	color: #308BAB;
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 6px;
+	padding-right: 6px;
+	border: 1px solid white;
+	border-radius: 50%;
+	position: relative;
+	z-index: 3;
+	background-color: white;
+	
+}
+
+.trait-point
+{
+	width: 200px;
+	height: 1px;
+	color: black;
+	background-color: black;
+	position: absolute;
+	top: 68px;
+	left: calc(50% - 100px);
+	opacity: 0.15;
+	z-index: 1;
+}
+
+.titres-parties p
+{
+	margin-right: 25%;
+	margin-left: 25%;
+	font-family: "robotobold";
+	opacity: 0.7;
+}
+
+h2 + p
+{
+	margin-top: 80px;
+}
+
+
+
+/* PARTIE NOS SERVICES */
+
+
+.nos-services
+{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;;
+	font-family: "robotobold";
+	padding-bottom: 80px;
+	padding-top: 100px;
+
+}
+
+.nos-services p
+{
+	opacity: 0.7;
+	line-height: 150%;
+}
+
+.corps-services
+{
+	display: flex;
+	height: 500px;
+	padding-top: 50px;
+}
+
+.nos-services img
+{
+	width: 520px;
+	height: 319px;
+	margin: auto;
+	padding-bottom: 5%;
+	padding-left: 5%;
+}
+
+.liste-services
+{
+	width: 50%;
+	margin-left: 30px;
+	margin-top: 100px;
+
+}
+
+.liste-services > div
+{
+	display: flex;
+	align-items: center;
+	height: 33%;
+	position: relative;
+}
+
+
+
+.textes-services
+{
+	width: 100%;
+	position: relative;
+	padding-left: 50px;
+	padding-right: 10%;
+
+}
+
+h3
+{
+	font-family: "robotobold";
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+#UX-design:before
+{
+	content: "\f201";
+	font-family: FontAwesome;
+	color: #5cadd3;
+	font-size: 28px;
+	padding: 16px;
+	border: 0.5px solid #E2E2E2;
+	border-radius: 50%;
+	border-color: grey;
+	position: absolute;
+	top: 15px;
+	left: -60px;
+}
+
+#UX-design:after
+{
+	content: "\f111";
+	font-family: FontAwesome;
+	color: #308BAB;
+	font-size: 18px;
+	position: absolute;
+	top: 32px;
+	left: -3px;
+	background-color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#UI-design:before
+{
+	content: "\f1b3";
+	font-family: FontAwesome;
+	color: #5cadd3;
+	font-size: 28px;
+	padding: 16px 14px 16px 14px;
+	border: 0.5px solid #E2E2E2;
+	border-radius: 50%;
+	border-color: grey;
+	position: absolute;
+	top: 10px;
+	left: -60px;
+}
+
+#UI-design:after
+{
+	content: "\f111";
+	font-family: FontAwesome;
+	color: #308BAB;
+	font-size: 18px;
+	position: absolute;
+	top: 28px;
+	left: -3px;
+	background-color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#SEO:before
+{
+	content: "\f200";
+	font-family: FontAwesome;
+	color: #5cadd3;
+	font-size: 28px;
+	padding: 17px;
+	border: 0.5px solid #E2E2E2;
+	border-radius: 50%;
+	border-color: grey;
+	position: absolute;
+	top: 10px;
+	left: -60px;
+}
+
+#SEO:after
+{
+	content: "\f111";
+	font-family: FontAwesome;
+	color: #308BAB;
+	font-size: 18px;
+	position: absolute;
+	top: 27px;
+	left: -6px;
+	background-color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+/*        MESPROJETS         */
+
+
+
+.nos-projets
+{	
+	padding-top: 25px;
+	width: 100%;
+	padding-bottom: 100px;
+	background-color: #F1F3F3;
+}
+
+/*Menu projets */
+
+section ul
+{
+	margin-top: 50px;
+	padding-top: 50px;
+	display: flex;
+	justify-content: center;
+}
+
+/* Cases menu */
+section li
+{
+	position: relative;
+	width: 130px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	background-color: #B6B9B9;
+	font-family: "robotobold";
+	font-size: 19px;
+	color: black;
+	opacity: 0.50;
+}
+section li:last-child
+{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.flèche-menu
+{
+	position: absolute;
+	font-size: 40px;
+	color: #308BAB;
+	top: 31px;
+	left:calc(50% - 11.43px);
+	visibility: hidden;
+}
+
+section li:hover
+{
+	position: relative;
+	background-color: #5cadd3;
+	box-shadow: 0px 5px 0px #308BAB;
+	color: white;
+	opacity: 1;
+}
+
+section li:hover .flèche-menu
+{
+	visibility: visible;
+}
+
+/* Case menu "Corporate toujours active" */
+section .active
+{
+	position: relative;
+	background-color: #5cadd3;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	box-shadow: 0px 5px 0px #308BAB;
+	color: white;
+	opacity: 1;
+}
+
+.flèche-menu-active
+{
+	position: absolute;
+	font-size: 40px;
+	color: #308BAB;
+	top: 31px;
+	left:calc(50% - 11.43px);
+}
+
+
+#liste-projets
+{
+	width: 100%;
+	max-width: 1600px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 50px;
+}
+
+figure
+{
+	position: relative;
+	width: 300px;
+	height: 200px;
+	margin: 2%;
+}
+
+figure figcaption
+{
+	display: none;
+}
+
+figure:hover figcaption
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 35%;
+	width: 100%;
+	background-color: rgb(0,0,0,0.4);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+	line-height: 20px;
+}
+
+figure:hover figcaption span
+{
+	font-family: "robotobold";
+	font-size: 17px;
+	margin-left: 10px;
+}
+
+figure:hover figcaption p
+{
+	margin-left: 10px;
+}
+
+figure:hover .bulle
+{
+	position: absolute;
+	top: -22px;
+	right: 10px;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	color: white;
+	border: 2px solid white;
+	background: #5cadd3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/*         FOOTER        */
+
+footer
+{
+	position: relative;
+	width: 100%;
+	height: 700px;
+	padding-bottom: 50px;
+}
+
+/* Map */
+footer iframe
+{
+	width: 100%;
+	height: 700px;
+}
+
+/* Overlay Map */
+.overlay-map
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 700px;
+	background-color:rgba(92,173,211,0.3);
+	z-index: 50000;
+	pointer-events: none;
+}
+
+/* Ensemble Titre + formulaire */
+.formulaire
+{
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	height: 600px;
+	position: absolute;
+	top : 50px;
+	right: 100px;
+	padding-left: 15px;
+	padding-right: 15px;
+	z-index: 50000000;
+
+}
+
+/* Overlay Formulaire + titre */
+.overlay-formulaire
+{
+	width: 380px;
+	height: 600px;
+	position: absolute;
+	top : 50px;
+	right: 100px;
+	background-color : rgba(255,255,255,0.7);	
+	z-index: 500000;
+}
+
+
+/* Ensemble titre formulaire + adresse + tel */
+.formulaire div
+{
+	height: 140px;
+	line-height: 130%;
+	margin-left: 15px;
+}
+
+/* Titre formulaire */
+h4
+{
+	font-size: 25px;
+	margin-top: 20px;
+	height: 30px;
+	margin-bottom: 5px;
+	font-family: "robotobold";
+}
+
+/* Web agency titre formulaire */
+h5
+{
+	font-size: 14px;
+	font-weight: bold;
+
+}
+
+/* Adresse & Téléphone */
+.formulaire p
+{
+	opacity: 0.75;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+/* Ensemble des cases du formulaire */
+footer form
+{
+	display: flex;
+	flex-direction: column;
+}
+
+/* Case formulaire */
+footer form input
+{
+	padding: 10px;
+	margin: 12px;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+
+/* Case message */
+form textarea
+{
+	padding: 10px 10px 30px 10px;
+	margin: 12px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	font-family:Arial;
+}
+
+/* Bouton Send Message */
+form p
+{
+	width: 120px;
+	padding: 10px;
+	margin-left: 12px;
+	margin-top: 5px;
+	text-align: center;
+	background-color: #5cadd3;
+	color: white;
+	font-weight: bold;
+	border-radius: 5px;
+	box-shadow: 1px 4px 0px #308BAB;
+}
